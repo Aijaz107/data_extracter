@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=k, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td,tr{
+            border:2px solid black;
+            border-collapse:collapse;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <th>NAME</th>
+        <th>DATE</th>
+        <th>REPORTS</th>
+        <th>TEAM LEAD</th>
+        <th>NO OF HOURS</th>
+        <th>TODAYS PROGRESS</th>
+        <th>UPLOAD TODAYS DOCUMENTS</th>
+        <th>CONCERN IF ANY</th>
+        <th>NEXT PLAN</th>
+        <th>UPLOAD NEXT PLAN DOCUMNET IF ANY</th>
+
+    {%for i in range(data|length) %} 
+      
+    <!-- table rows -->
+    
+     
+        <tr>
+            <td>{{data[i]['NAME ']}}</td>
+            <td>{{data[i]['DATE']}}</td>
+            <td>{{data[i]['REPORTS']}}</td>
+            <td>{{data[i]['Team Lead [Row ]']}}</td>
+            <td>{{data[i]['No of Hours *']}}</td>
+            <td>{{data[i]['TODAY\'S PROGRESS']}}</td>
+            <td>{{data[i]['UPLOAD TODAY\'S DOCUMENTS']}}</td>
+            <td>{{data[i]['CONCERN IF ANY']}}</td>
+            <td>{{data[i]['NEXT PLAN']}}</td>
+            <td>{{data[i]['UPLOAD NEXT PLAN DOCUMENTS IF ANY']}}</td>
+
+        </tr>  
+    
+    {%endfor%} 
+    </table>    
+      
+</body>
+</html>
+
